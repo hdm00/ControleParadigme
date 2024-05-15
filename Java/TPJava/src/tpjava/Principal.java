@@ -16,7 +16,12 @@ public class Principal {
 		liste.add(membre1);
 		liste.add(employe1);
 		
-		System.out.println(liste);
+		for(int i=0; i < liste.size(); i++) {
+			Personne element = liste.get(i);
+			element.afficherDetails();
+			System.out.println();
+		}
+
 	}
 
 }
