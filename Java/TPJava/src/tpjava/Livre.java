@@ -5,10 +5,10 @@ public class Livre {
 	private String titre, auteur, isbn;
 	private boolean disponible;
 	
-	public Livre(String titre, String auteur, boolean disponible) {
+	public Livre(String titre, String auteur, boolean isDisponible) {
 		this.titre = titre;
 		this.auteur = auteur;
-		this.disponible = disponible;
+		this.disponible = isDisponible;
 	}
 	
 	public String getTitre() {
@@ -39,11 +39,11 @@ public class Livre {
 		this.isbn = newIsbn;
 	}
 	
-	public void setDisponible(boolean newDisponible) {
-		this.disponible = newDisponible;
+	public void setDisponible(boolean isDisponible) {
+		this.disponible = isDisponible;
 	}
 	
 	public void afficherDetails() {
-		System.out.println("Titre : " + getTitre() + "Auteur : " + getAuteur() + "Isbn : " + getIsbn() + "Disponible ? " + getDisponible());
+		System.out.println("Titre : " + getTitre() + "\nAuteur : " + getAuteur() + "\nIsbn : " + getIsbn() + "\nDisponible ? " + getDisponible());
 	}
 }
