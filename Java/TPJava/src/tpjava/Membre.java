@@ -14,7 +14,7 @@ public class Membre extends Personne{
 	}
 
 	public void afficherDetails() {		
-		System.out.println("Nom : " + this.getNom() + "\nPrénom : " + this.getPrénom() + "\nIdentifiant : " + this.getId() + "\nDateAdhésion : " + this.dateAdhésion + "\nStaut : " + this.statut);
+		System.out.println("Nom : " + super.getNom() + "\nPrénom : " + super.getPrénom() + "\nIdentifiant : " + super.getId() + "\nDateAdhésion : " + this.dateAdhésion + "\nStaut : " + this.statut);
 	}
 
 }
