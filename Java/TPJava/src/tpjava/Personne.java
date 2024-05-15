@@ -1,8 +1,8 @@
 package tpjava;
 
 public abstract class Personne {
-	String nom, prénom;
-	int id;
+	private String nom, prénom;
+	private int id;
 	
 	public Personne(String nom, String prénom, int id) {
 		this.nom = nom;
