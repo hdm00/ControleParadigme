@@ -1,6 +1,6 @@
 package tpjava;
 
-public class Livre {
+public class Livre implements Empruntable {
 	
 	private String titre, auteur, isbn;
 	private boolean disponible;
@@ -23,7 +23,7 @@ public class Livre {
 		return this.isbn;
 	}
 	
-	public boolean getDisponible() {
+	public boolean isDisponible() {
 		return this.disponible;
 	}
 	
@@ -44,6 +44,18 @@ public class Livre {
 	}
 	
 	public void afficherDetails() {
-		System.out.println("Titre : " + getTitre() + "\nAuteur : " + getAuteur() + "\nIsbn : " + getIsbn() + "\nDisponible ? " + getDisponible());
+		System.out.println("Titre : " + getTitre() + "\nAuteur : " + getAuteur() + "\nIsbn : " + getIsbn() + "\nDisponible ? " + isDisponible());
+	}
+
+	public void emprunter() {
+		if (this.isDisponible() == true) {
+			System.out.println("Emprunt du livre " + getTitre() + " Validé." );
+			this.setDisponible(false);	
+		}
+	}
+
+	public void retourner() {
+		System.out.println("Retour du livre " + getTitre() + " Validé." );
+		this.setDisponible(true);
 	}
 }
