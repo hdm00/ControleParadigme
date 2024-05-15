@@ -21,7 +21,14 @@ public class Principal {
 			element.afficherDetails();
 			System.out.println();
 		}
+		
+		Livre livre1 = new Livre("Tintin", "Zed", true);
+		membre1.emprunterLivre(livre1);
 
+		for(int i=0; i < membre1.emprunts.size(); i++) {
+			Livre element = membre1.emprunts.get(i);
+			System.out.println("Liste des emprunts de " + membre1.getNom() + " " + membre1.getPrénom() + " :" + element.getTitre());
+		}
 	}
 
 }
